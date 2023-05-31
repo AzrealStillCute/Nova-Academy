@@ -5,9 +5,9 @@ function App() {
 
   return (
     <>
-      <div className=" pt-4 px-3 md:px-7">
+      <div className=" pt-4 px-5 md:px-7">
         <Header/>
-        <div className=" w-full h-px mt-3 bg-gray-300"></div>
+        <div className=" w-full h-px mt-3 bg-gray-200"></div>
         <div className=" max-w-7xl flex m-auto flex-col">
           <Home/>
         </div>
