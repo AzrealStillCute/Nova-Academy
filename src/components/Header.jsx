@@ -19,12 +19,12 @@ function Header() {
           <a className=' font-body text-sm text-gray-500 hover:text-black transition-colors ease-out duration-300 cursor-pointer mx-4 xl:mx-5'>Testimonials</a>
           <a className=' font-body text-sm text-gray-500 hover:text-black transition-colors ease-out duration-300 cursor-pointer mx-4 xl:mx-5'>Contact</a>
         </div>
-        <nav className={` flex lg:hidden pt-20 absolute top-14 md:top-16 h-screen w-full bg-white bg-opacity-95 z-10 flex-col items-center scale-0 ${ isClick ? " scale-100" : ""} `}>
-          <a className=' font-body text-base md:text-lg mb-10 font-medium text-gray-500'>About</a>
-          <a className=' font-body text-base md:text-lg mb-10 font-medium text-gray-500'>Programs</a>
-          <a className=' font-body text-base md:text-lg mb-10 font-medium text-gray-500'>Admission</a>
-          <a className=' font-body text-base md:text-lg mb-10 font-medium text-gray-500'>Testimonials</a>
-          <a className=' font-body text-base md:text-lg mb-10 font-medium text-gray-500'>Contact</a>
+        <nav className={` flex lg:hidden pt-10 absolute top-14 md:top-16 h-screen w-full bg-white bg-opacity-95 z-10 flex-col items-center scale-0 ${ isClick ? " scale-100" : ""} `}>
+          <a className=' font-body text-base md:text-lg mb-10 text-gray-500'>About</a>
+          <a className=' font-body text-base md:text-lg mb-10 text-gray-500'>Programs</a>
+          <a className=' font-body text-base md:text-lg mb-10 text-gray-500'>Admission</a>
+          <a className=' font-body text-base md:text-lg mb-10 text-gray-500'>Testimonials</a>
+          <a className=' font-body text-base md:text-lg mb-10 text-gray-500'>Contact</a>
         </nav>
         <button onClick={clickHandle} className=' block lg:hidden'>
           <div className={` h-0.5 bg-black w-6 mb-1.5 rounded-sm transition-all ease-out duration-300 ${ isClick ? " origin-top-right -rotate-45" : ""}`} ></div>

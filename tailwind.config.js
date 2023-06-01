@@ -13,7 +13,8 @@ export default {
       } ,
       height: {
         "hero" : "500px",
-        "photo" : "500px"
+        "photo" : "500px",
+        "photo-small" : "420px"
       } ,
       fontFamily : {
         "heading" : ['Raleway', 'sans-serif'],
