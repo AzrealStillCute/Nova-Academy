@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         heading: ["Raleway", "sans-serif"],
         body: ["Poppins", "sans-serif"],
-      },
+      }
     },
   },
   plugins: [],

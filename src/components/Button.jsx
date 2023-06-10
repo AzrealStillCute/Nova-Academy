@@ -5,10 +5,8 @@ function Button(props) {
 
   switch (props.size) {
     case "lg":
-      chgStyles = "px-7 py-4 text-base mr-16";
+      chgStyles = "px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base mr-10 md:mr-16";
       break;
-    case "md":
-      chgStyles = "px-5 py-3 text-sm";
     case "sm":
       chgStyles = "px-3 py-2 text-sm";
   }
