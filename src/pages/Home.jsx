@@ -7,7 +7,7 @@ import mobileHero from "../assets/hero_photo3.jpg"
 
 function Home() {
   return (
-    <div className=' grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-2 mt-10 lg:mt-16 items-center'>
+    <div className=' grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-2 mt-10 items-center'>
         <div className=' w-full md:w-4/5 lg:w-[32rem]'>
             <h1 className='text-center lg:text-left font-heading text-4xl md:text-6xl font-extrabold'>Set Your Goal <br/> and Make It <br className='hidden lg:block'/> Happen With us</h1>
             <p className=' text-center lg:text-left text-sm md:text-lg text-gray-500 my-6 md:my-8'>Turn your goals into reality at nova academy, where we empower students to achieve greatness</p>
@@ -18,7 +18,7 @@ function Home() {
         </div>
         <div className=' flex justify-center'>
             <img src={heroPhoto} className=' hidden lg:block w-[35rem]'/>
-            <img src={mobileHero} className=' w-full md:w-11/12 mt-10 rounded-xl lg:hidden'/>
+            <img src={mobileHero} className=' w-[48rem] mt-10 rounded-xl lg:hidden'/>
         </div>
     </div>
   )

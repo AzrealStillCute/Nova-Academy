@@ -6,7 +6,7 @@ import coursera from "../assets/coursera.png"
 
 function Companies() {
   return (
-    <div className=' grid grid-cols-2 gap-y-10 lg:grid-cols-4 justify-items-center items-center mt-5 py-5 '>
+    <div className=' grid grid-cols-2 gap-y-10 lg:grid-cols-4 justify-items-center items-center mt-10 py-5 '>
     <div>
       <img src={skillShare} className=' h-10 md:h-14 grayscale contrast-0' />
     </div>

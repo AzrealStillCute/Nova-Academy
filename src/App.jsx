@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import Companies from "./pages/Companies";
 import Home from "./pages/Home";
+import OurSpecials from "./pages/OurSpecials";
+import Programs from "./pages/Programs";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Home/>
         <Companies/>
         <About/>
+        <OurSpecials/>
+        <Programs/>
       </div>
     </div>
   );
