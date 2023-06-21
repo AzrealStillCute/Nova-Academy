@@ -1,13 +1,9 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import styles from '../Styles'
-import Course from '../components/Course'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import preGed from "../assets/preGed.jpg"
-
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
-import 'swiper/css';
+import intensiveGEd from "../assets/GedIntensive.jpg"
+import Ielts from "../assets/Ielts.jpg"
+import Course from "../components/Course"
 
 const courses = [
   {
@@ -17,16 +13,16 @@ const courses = [
     description : "The pre-GED class is suitable for individuals who are preparing to earn their GED (General Educational Development) certificate and are seeking...",
   } ,
   {
-    photo : preGed,
-    name: "Pre GED class",
-    fee: "50",
-    description : "The pre-GED class is suitable for individuals who are preparing to earn their GED (General Educational Development) certificate and are seeking...",
+    photo : intensiveGEd,
+    name: "GED intensive class",
+    fee: "60",
+    description : "The GED intensive class is designed for individuals who are committed to an accelerated and focused preparation for the GED (General Educational Development) exam. It is ideal for those who are motivated to obtain their high school equivalency diploma quickly and are willing to dedicate significant time and effort to their studies",
   } ,
   {
-    photo : preGed,
-    name: "Pre GED class",
-    fee: "50",
-    description : "The pre-GED class is suitable for individuals who are preparing to earn their GED (General Educational Development) certificate and are seeking...",
+    photo : Ielts,
+    name: "Preparation for IELTS ",
+    fee: "80",
+    description : "The preparation for IELTS (International English Language Testing System) class is tailored for individuals who aim to enhance their English language skills and achieve a high score on the IELTS exam. It is suitable for students who are planning to study or work in an English-speaking country and need to demonstrate their proficiency in English for academic or professional purposes.",
   } ,
   {
     photo : preGed,
@@ -43,15 +39,17 @@ const courses = [
   
 ]
 
-
+import { Navigation, Pagination, A11y } from 'swiper';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import SlideNextBtn from '../components/SlideNextBtn'
 
 function Programs() {
 
-  const swiper = useSwiper()
-
   return (
     <div className=' mb-80'>
-      <div className='grid grid-cols-2 items-center'>
+      <div className='grid grid-cols-2 items-center mb-20 h-50'>
         <div>
             <span className={styles.subHeading}>Browse the high quality</span>
             <h2 className={styles.heading}>Our Programs</h2>
@@ -60,25 +58,19 @@ function Programs() {
             Experience our high-quality programs that foster academic excellence, critical thinking, and holistic development.
         </p>
       </div>
-      <div className='relative flex items-center mt-20'>
-        {/* <FontAwesomeIcon icon={faChevronLeft} className=' z-10 h-7 py-3.5 px-5 rounded-full text-white bg-gray-400 absolute -left-8 cursor-pointer hover:scale-95 hover:bg-gray-500 transition ease-out'/>
-        <FontAwesomeIcon icon={faChevronRight} className=' z-10 h-7 py-3.5 px-5 rounded-full text-white bg-gray-400 absolute -right-8 cursor-pointer hover:scale-95 hover:bg-gray-500 transition ease-out'/> */}
-        <Swiper
-          modules={[Keyboard, Scrollbar, Navigation, Pagination]}
-          spaceBetween={20}
-          slidesPerView={3}
-          slidesPerGroupSkip={1}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          {
-          courses.map( i => <SwiperSlide>
-            <Course photo={i.photo} name={i.name} fee={i.fee} description={i.description} />
-          </SwiperSlide> )
-          }
-        </Swiper>
-        <button className=' bg-sky-500 p-5' onClick={()=> swiper.slideNext()}> next</button>
-      </div>
+      <Swiper
+      modules={[Navigation, Pagination, A11y]}
+      spaceBetween={20}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+    >
+      {
+        courses.map((i, index) => <SwiperSlide key={index}><Course photo={i.photo} name={i.name} fee={i.fee} description={i.description} /></SwiperSlide>)
+      }
+      <SlideNextBtn/>
+    </Swiper>
+
     </div>
   )
 }

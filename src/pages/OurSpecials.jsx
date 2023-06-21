@@ -40,7 +40,7 @@ function OurSpecials() {
             <h2 className={styles.heading}>Explore our <br/> Unique Benefits</h2>
         </div>
         {
-            offers.map( i => <OffersCard icon={i.icon} title={i.title} content={i.content}/> )
+            offers.map( (i, index) => <OffersCard key={index} icon={i.icon} title={i.title} content={i.content}/> )
         }
     </div>
   )
