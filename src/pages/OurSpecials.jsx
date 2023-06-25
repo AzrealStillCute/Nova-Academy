@@ -34,10 +34,10 @@ const offers = [
 function OurSpecials() {
 
   return (
-    <div className=' grid grid-cols-3 gap-7 mb-72'>
-        <div>
+    <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 mb-72'>
+        <div className=' mb-10'>
             <span className={styles.subHeading}>Discover The Exciting Offerings</span>
-            <h2 className={styles.heading}>Explore our <br/> Unique Benefits</h2>
+            <h2 className={styles.heading}>Explore our <br className=' hidden md:block'/> Unique Benefits</h2>
         </div>
         {
             offers.map( (i, index) => <OffersCard key={index} icon={i.icon} title={i.title} content={i.content}/> )

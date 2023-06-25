@@ -2,26 +2,29 @@ import React, { useState } from "react";
 import headerLogo from "../assets/header_logo.png";
 import styles from "../Styles";
 import Button from "./Button";
+import { Link } from "react-scroll";
 
 function Header() {
 
-    const [ isClick , setIsClick ] = useState(false)
+  const [ isClick , setIsClick ] = useState(false)
+
+  const nav = [ "About", "Programs", "Testimonial", "Contact"]
 
   return (
     <div className=" flex justify-between items-center py-2 px-5 border-b border-b-gray-200">
       <img src={headerLogo} className=" h-11 md:h-12" />
       <div className="hidden lg:block">
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} mx-5`}>About</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} mx-5`}>Programs</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} mx-5`}>Testimonials</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} mx-5`}>Contact</a>
+        {
+          nav.map((i, index)=> <Link to={i} smooth={true} duration={500 + (index * 100)} offset={-80} key={index} className={`${styles.regularText} ${styles.hoverText} mx-5`}>{i}</Link>)
+        }
       </div>
       <div className={`lg:hidden absolute z-10 right-5 top-16 flex flex-col justify-center border border-gray-200 bg-white rounded-lg pt-3 px-5 pb-5 w-52 transition ease-out duration-300
         ${ isClick ? " translate-y-3 opacity-100" : "opacity-0"}`}>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} py-3 border-b border-b-gray-200`}>About</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} py-3 border-b border-b-gray-200`}>Programs</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} py-3 border-b border-b-gray-200`}>Testimonials</a>
-        <a href="#"className={`${styles.regularText} ${styles.hoverText} py-3 mb-3 border-b border-b-gray-200`}>Contact</a>
+          <div className=" mb-3">
+              {
+                nav.map((i, index) => <Link to={i} smooth={true} duration={500 + (index * 100)} offset={-80} key={index} className={`${styles.regularText} ${styles.hoverText} py-3 border-b border-b-gray-200 block`}>{i}</Link>)
+              }
+          </div>
         <Button size="sm">Register</Button>
         <a href="#" className={`${styles.regularText} ${styles.hoverText} mt-3 w-full text-center`}>log In?</a>
       </div>

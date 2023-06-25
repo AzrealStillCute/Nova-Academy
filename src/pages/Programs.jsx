@@ -48,8 +48,8 @@ import SlideNextBtn from '../components/SlideNextBtn'
 function Programs() {
 
   return (
-    <div className=' mb-80'>
-      <div className='grid grid-cols-2 items-center mb-20 h-50'>
+    <div className=' mb-72'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-y-5 items-center mb-10 h-50' id='Programs'>
         <div>
             <span className={styles.subHeading}>Browse the high quality</span>
             <h2 className={styles.heading}>Our Programs</h2>
@@ -60,10 +60,21 @@ function Programs() {
       </div>
       <Swiper
       modules={[Navigation, Pagination, A11y]}
-      spaceBetween={20}
-      slidesPerView={3}
       navigation
       pagination={{ clickable: true }}
+      breakpoints={{
+        0: {
+          slidesPerView: 1,
+        },
+        720: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1020: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      }}
     >
       {
         courses.map((i, index) => <SwiperSlide key={index}><Course photo={i.photo} name={i.name} fee={i.fee} description={i.description} /></SwiperSlide>)

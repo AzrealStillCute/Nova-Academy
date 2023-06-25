@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import About from "./pages/About";
-import Companies from "./pages/Companies";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import OurSpecials from "./pages/OurSpecials";
@@ -13,7 +12,6 @@ function App() {
       <Header />
       <div className=" px-5 md:px-8 mx-auto max-w-7xl">
         <Home/>
-        <Companies/>
         <About/>
         <OurSpecials/>
         <Programs/>
