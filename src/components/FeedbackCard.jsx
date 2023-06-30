@@ -3,12 +3,11 @@ import styles from '../Styles'
 
 function FeedbackCard({photo, name , batch, feedback}) {
   return (
-    <div className=' border border-gray-200 h-36 md:h-40 rounded-md flex px-4 py-3 md:py-5 md:px-8'>
-      <img src={photo} className=' w-16 lg:w-20 aspect-square shrink-0 rounded-full bg-sky-500 mr-5 md:mr-8 self-center'/>
-      <div>
-        <h5 className=' font-medium text-lg mb-1'>{name}</h5>
-        <span className='text-sm mb-1.5 block text-gray-500'>{batch}</span>
-        <p className={`${styles.regularText} h-14 md:h-16 overflow-y-clip`}>{feedback}</p>
+    <div className='border border-gray-200 flex flex-col md:flex-row justify-between md:h-40 p-4 md:p-6 rounded-md'>
+      <img src={photo} className='h-20 w-20 mb-3 md:mb-0 md:w-auto md:h-full rounded-md mr-8'/>
+      <div className=' flex flex-col justify-between'>
+        <h5 className=' font-medium text-lg mb-2'>{name}</h5>
+        <p className={`${styles.regularText} h-16 overflow-y-clip`}>{feedback}</p>
       </div>
     </div>
   )

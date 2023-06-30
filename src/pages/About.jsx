@@ -18,7 +18,7 @@ function About() {
                     <h2 className={styles.heading}>About Our School</h2>
                     <p className={`mt-10 ${styles.bodyText}`}>At Nova acdemy, our journey is built on a steadfast mission to empower young minds and shape bright futures. Through exceptional education, nurturing environments, and a commitment to excellence, we strive to equip our students with the knowledge, skills, and values necessary to succeed in a rapidly changing world.</p>
                 </div>
-                <button className={`${styles.bodyText}   hover:ring-1 ring-gray-200 rounded-md p-2 md:p-3 mt-10`}>See More <FontAwesomeIcon icon={faArrowRight} className=' ml-2'/></button>
+                <button className={`${styles.bodyText} text-sky-500 mt-10`}>See More <FontAwesomeIcon icon={faArrowRight} className=' ml-2'/></button>
             </div>
         </div>
     </div>
