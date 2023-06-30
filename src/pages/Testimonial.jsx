@@ -75,7 +75,7 @@ function Testimonial() {
         </div>
         <div className=' grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-7'>
           { 
-            students.slice(0, visible).map((i, index) => <FeedbackCard key={index} photo={i.photo} name={i.name} batch={i.batch} feedback={i.feedback}/>)
+            students.slice(0, visible).map((i, index) => <FeedbackCard key={index} photo={i.photo} name={i.name} feedback={i.feedback}/>)
           }
         </div>
         <div className=' flex items-center justify-center mt-10'>
